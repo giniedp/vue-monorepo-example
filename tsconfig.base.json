@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "sourceMap": true,
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "typeRoots": [
+      "node_modules/@types",
+      "tools/types"
+    ],
+    "types": [
+      "webpack-env",
+      "jest",
+      "vue-shims"
+    ],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@apps/hello-app/*": ["apps/hello-app/src/*"],
+      "@libs/hello-lib": ["libs/hello-lib/src/index.ts"],
+    }
+  }
+}

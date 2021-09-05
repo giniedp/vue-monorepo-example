@@ -1,0 +1,22 @@
+{
+  "name": "vueapp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "serve:hello-app": "npm run serve -w @apps/hello-app",
+    "build:hello-app": "npm run build -w @apps/hello-app",
+    "build:hello-lib": "npm run build -w @libs/hello-lib",
+    "test:hello-lib": "npm run test:unit -w @libs/hello-lib"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "tools/*"
+  ],
+  "devDependencies": {
+    "ts-node": "^10.2.1"
+  }
+}
