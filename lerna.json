@@ -1,0 +1,9 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "packages": [
+    "apps/*",
+    "libs/*",
+    "tools/*"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "vueapp",
+  "name": "vue-monorepo",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -9,23 +9,22 @@
     "node": ">=16"
   },
   "scripts": {
-    "serve:hello-app": "npm run serve -w @apps/hello-app",
-    "build:hello-app": "npm run build -w @apps/hello-app",
-    "build:hello-lib": "npm run build -w @libs/hello-lib",
-    "build:ts-lib": "npm run build -w @libs/ts-lib",
-    "build:world-lib": "npm run build -w @libs/world-lib",
-    "build:world-lib:types": "npm run build:types -w @libs/world-lib",
-    "test:hello-lib": "npm run test:unit -w @libs/hello-lib",
-    "test:world-lib": "npm run test:unit -w @libs/world-lib"
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "list": "lerna list --all",
+    "hello-app:build": "lerna run build --scope @apps/hello-app",
+    "hello-app:build:deep": "lerna run build --scope @apps/hello-app --include-filtered-dependencies",
+    "hello-app:serve:": "lerna run serve --scope @apps/hello-app --stream",
+    "hello-lib:build": "lerna run build --scope @libs/hello-lib",
+    "hello-lib:build:deep": "lerna run build --scope @libs/hello-lib --include-filtered-dependencies",
+    "hello-lib:test": "lerna run test:unit --scope @libs/hello-lib",
+    "world-lib:build": "lerna run build --scope @libs/world-lib",
+    "world-lib:build:deep": "lerna run build --scope @libs/world-lib --include-filtered-dependencies",
+    "world-lib:test": "lerna run test:unit --scope @libs/world-lib",
+    "ts-lib:build": "lerna run build --scope @libs/ts-lib",
+    "ts-lib:build:deep": "lerna run build --scope @libs/ts-lib --include-filtered-dependencies"
   },
-  "workspaces": [
-    "apps/*",
-    "libs/*",
-    "tools/*"
-  ],
   "devDependencies": {
-    "@parcel/transformer-image": "^2.0.0-rc.0",
-    "@parcel/transformer-vue": "^2.0.0-rc.0",
-    "ts-node": "^10.2.1"
+    "lerna": "^4.0.0"
   }
 }

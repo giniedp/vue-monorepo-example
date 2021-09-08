@@ -1,11 +1,26 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "sourceMap": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "../../tools/types"
+    ],
     "rootDir": "./src",
     "baseUrl": "./src",
     "outDir": "./dist",
     "lib": ["ESNext", "DOM"],
-    "typeRoots": ["node_modules/@types"],
     "types": []
   }
 }

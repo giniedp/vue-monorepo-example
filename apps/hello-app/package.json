@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:vue && npm run build:parcel",
+    "build": "npm run build:vue",
     "build:vue": "vue-cli-service build",
     "build:parcel": "cd dist && parcel build index.html",
     "test:unit": "vue-cli-service test:unit",
@@ -33,6 +33,9 @@
     "sass-loader": "^8.0.2",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "~4.1.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.4",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0"
   }
 }
