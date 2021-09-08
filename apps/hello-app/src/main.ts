@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import {  } from '@libs/world-lib'
 
 Vue.config.productionTip = false
 

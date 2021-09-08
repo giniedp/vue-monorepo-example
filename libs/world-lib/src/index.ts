@@ -1,2 +1,2 @@
+export * from './world-fn'
 export * from './components'
-export * from './hello-fn'

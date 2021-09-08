@@ -7,6 +7,7 @@ module.exports = {
   },
   projects: [
     'apps/hello-app',
-    'libs/hello-lib'
+    'libs/hello-lib',
+    'libs/world-lib'
   ]
 }

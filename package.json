@@ -3,20 +3,29 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "author": "",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "serve:hello-app": "npm run serve -w @apps/hello-app",
     "build:hello-app": "npm run build -w @apps/hello-app",
     "build:hello-lib": "npm run build -w @libs/hello-lib",
-    "test:hello-lib": "npm run test:unit -w @libs/hello-lib"
+    "build:ts-lib": "npm run build -w @libs/ts-lib",
+    "build:world-lib": "npm run build -w @libs/world-lib",
+    "build:world-lib:types": "npm run build:types -w @libs/world-lib",
+    "test:hello-lib": "npm run test:unit -w @libs/hello-lib",
+    "test:world-lib": "npm run test:unit -w @libs/world-lib"
   },
-  "author": "",
-  "license": "UNLICENSED",
   "workspaces": [
     "apps/*",
     "libs/*",
     "tools/*"
   ],
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-vue": "^2.0.0-rc.0",
     "ts-node": "^10.2.1"
   }
 }

@@ -2,20 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-    <Counter />
+    <HelloCounter />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
-// import Counter from '../../../libs/hello-lib/src'
-import Counter from '@libs/hello-lib'
+import { HelloCounter } from '@libs/hello-lib'
 
 export default Vue.extend({
   name: 'App',
   components: {
-    Counter,
+    HelloCounter,
     HelloWorld
   }
 });

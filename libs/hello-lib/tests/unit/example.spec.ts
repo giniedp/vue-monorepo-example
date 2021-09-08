@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import Counter from '../../src/index'
+import { HelloCounter } from "@/components/index";
 
-describe('Counter.vue', () => {
+describe('HelloCounter.vue', () => {
   it('renders props.msg when passed', () => {
-    const wrapper = shallowMount(Counter)
+    const wrapper = shallowMount(HelloCounter)
     expect(wrapper.text()).toContain('-')
     expect(wrapper.text()).toContain('+')
   })
